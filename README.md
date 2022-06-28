@@ -14,11 +14,16 @@
 #CMD ["python3", "app.py"]  if both, there will be arguements but does same things.
 
 
-#If secret key or database uri do not declare in dockerfile because it'll be on a repository for everyone to see.
+# QA-DevOps-Fundamental-Project- MCQ App:  
+This repository contains my deliverable for the QA devops fundamental project.
 
-#AMAZING CODE
-##docker stop $(docker ps -q) && docker rm $(docker ps -aq)
-
-#export MYSQL_ROOT_PASSWORD=password123
-#docker run -d --env MYSQL_ROOT_PASSWORD= --name Project_Chapter_Master --network Project_Chapter_Master
-#docker network inspect # ProjectChapterMaster
+## Contents:
+* [Project Brief](#Project-Brief)  
+* [App Design](#App-Design)
+* [CI Pipeline](#CI-Pipeline)  
+* [Risk Assessment](#Risk-Assessment)
+* [Testing](#Testing)
+* [The App](#The-App)
+* [Updates](#Updates)
+* [Known Issues](#Known-Issues)
+* [Future Work](#Future-Work)

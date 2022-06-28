@@ -1,45 +1,30 @@
 version: "3.8"
 services:
-  mysql:
-    container_name: mysql
-    image: agray998/fund-proj-db:latest
-    build: ./db
-    volumes:
-      - type: volume
-        source: app-vol
-        target: /var/lib/mysql
+  service_1:
+    image: chaptermaster-app:1
+    build: ./service_1
+    container_name: service_1
     networks:
-      - app-net
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-  flask-app:
-    container_name: flask-app
-    image: agray998/fund-proj-app:v2
-    build: ./flask-app
+      - example-net
+
+  service_2:
+      image: chaptermaster-app:1
+    build: ./service_2
+    container_name: service_2
     networks:
-      - app-net
-    environment:
-      DATABASE_URI: ${DATABASE_URI}
-      SECRET_KEY: ${SECRET_KEY}
-    depends_on:
-      - mysql
+      - example-net
   nginx:
-    container_name: nginx
     image: nginx:latest
+    container_name: nginx
     networks:
-      - app-net
-    ports:
-      - target: 80
-        published: 80
-        protocol: tcp
+      - example-net
     volumes:
-      - type: bind
-        source: ./nginx.conf
-        target: /etc/nginx/nginx.conf
-    depends_on:
-      - flask-app
-volumes:
-  app-vol:
+      -type: bind
+      source: ./nginx.conf
+      target: /etc/nginx/nginx.conf
+  ports:
+    - target: 80
+      published: 80
+      protocol: tcp
 networks:
-  app-net:
-   # driver: overlay (uncomment when deploying via docker stack)
+    example-net:

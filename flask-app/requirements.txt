@@ -1,8 +1,2 @@
 flask
-flask_sqlalchemy
-flask_testing
-flask_wtf
-wtforms
-pytest
-pytest-cov
-pymysql
+requests
