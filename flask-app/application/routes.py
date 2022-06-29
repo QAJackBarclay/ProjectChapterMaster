@@ -30,7 +30,7 @@ def register_1():
      return render_template('home.html', form=form)
 
 #Change to Roman Numerals
-@app.routes('/get_chapter', methods=['GET'])
+@app.route('/get_chapter', methods=['GET'])
 def get_chapter_heretic():
     chapter_type = random.choice = ' '
     text = (choice(heretic))

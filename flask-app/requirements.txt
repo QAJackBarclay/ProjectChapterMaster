@@ -1,4 +1,12 @@
-flask
-requests
-wtforms
+Flask
+Flask-SQLAlchemy
 SQLAlchemy
+pymysql
+flask_wtf
+wtforms
+pytest
+pytest-cov
+flask-testing
+selenium
+gunicorn
+markupsafe
