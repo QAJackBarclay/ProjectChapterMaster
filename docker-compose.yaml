@@ -1,30 +1,39 @@
 version: "3.8"
 services:
   service_1:
-    image: chaptermaster-app:1
     build: ./service_1
     container_name: service_1
     networks:
-      - example-net
-
+      - name-net
   service_2:
-      image: chaptermaster-app:1
     build: ./service_2
     container_name: service_2
     networks:
-      - example-net
+      - name-net
+  service_3:
+    build: ./service_3
+    container_name: service_3
+    networks:
+      - name-net
+  service_4: 
+    build: ./service_4
+    container_name: service_4
+    networks:
+      - name-net
   nginx:
     image: nginx:latest
     container_name: nginx
     networks:
-      - example-net
+      - name-net
     volumes:
-      -type: bind
-      source: ./nginx.conf
-      target: /etc/nginx/nginx.conf
-  ports:
-    - target: 80
-      published: 80
-      protocol: tcp
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    depends_on:
+      - service_1
 networks:
-    example-net:
+  name-net:
