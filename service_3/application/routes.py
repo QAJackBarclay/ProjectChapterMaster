@@ -1,6 +1,8 @@
 from application import app
-from random import randint
+import random
+from flask import Flask, Response
 
 @app.route('/get_service', methods=['GET'])
-def get_chapter():
-    return (random.randint(2, 60))
+def get_service():
+    service = random.randint(10, 100)
+    return Response(service, mimetype='text/plain')

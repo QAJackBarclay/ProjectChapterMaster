@@ -1,6 +1,6 @@
 from application import app
-from flask import request
-from random import choice
+from flask import request, Response
+import random
 
 scout = {
     "names": {
@@ -35,7 +35,7 @@ captain = {
 psyker = {
     "names": {
         0: "Stable Psyker",
-        1: "Unstable Psyker,
+        1: "Unstable Psyker",
         2: "Corrupter Psyker",
     }
 }
@@ -45,19 +45,18 @@ master = "Chapter Master"
 
 
 @app.route('/get_rank')
-def deployed():
-    data_sent = request.get_json()
-    the_rank = data_sent[obj]
-    the_chapter = data_sent[source]
-    if rank == 'scout':
+def lname():
+    rank = ["scout", "brother", "captain", "psyker", "master"]
+    selection = random.choice(rank)
+    if selection == 'scout':
         lname = random.choice(list(scout["names"].values()))
-    elif rank == 'brother':
+    elif selection == 'brother':
         lname = random.choice(list(brother["names"].values()))
-    elif rank == 'captain':
+    elif selection == 'captain':
         lname = random.choice(list(captain["names"].values()))
-    elif rank == 'psyker':
+    elif selection == 'psyker':
         lname = random.choice(list(psyker["names"].values()))
-    else rank == 'master':
-        lname = master
+    elif selection == 'master':
+        lname = 'Chapter Master'
 
-return f"You are ${lname} of the ${chapter}, you have served them for ${service} years."
+    return Response(selection, mimetype='text/plain')

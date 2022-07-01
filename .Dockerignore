@@ -1,0 +1,4 @@
+*.sh
+*.md
+application/tests
+create.py
