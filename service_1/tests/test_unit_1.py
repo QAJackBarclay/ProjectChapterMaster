@@ -1,8 +1,9 @@
-
+from flask import Flask, url_for
 from flask_testing import TestCase
-from flask import url_for
-from requests_mock import mock
-from service_1.application import app
+from application import app 
+from unittest.mock import patch
+import requests_mock
+import requests
 
 class TestBase(TestCase):
 
@@ -12,12 +13,13 @@ class TestBase(TestCase):
 class TestResponse(TestBase):
 
     def test_index(self):
-
-        with mock() as m:
-            rank = requests.get('http://service_2:5000/get_rank').text
-            chapter = requests.get('http://service_3:5000/get_chapter').text
-            service = requests.post('http://service_4:5000/get_service').int
-
-            response = self.client.get(url_for('home'))
-
+        with requests_mock.Mocker() as m:
+            m.get('http://service_2:5000/get_chapter',text = 'Dark Angels')
+            m.get('http://service_3:5000/get_service', text = '20')
+            m.post('http://service_4:5000/get_rank', text = '30')
+            response=self.client.get(url_for('index'))
+            self.assert200(response)
+            self.assertIn(b'Dark Angels', response.data)
+            self.assertIn(b'20', response.data)
+            self.assertIn(b'30', response.data)
             

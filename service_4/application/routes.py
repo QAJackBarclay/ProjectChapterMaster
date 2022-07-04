@@ -2,61 +2,50 @@ from application import app
 from flask import request, Response
 import random
 
-scout = {
-    "names": {
-        0: "Sniper",
-        1: "Tunnel Rat",
-        2: "Neophyte",
-        3: "Scout",
-    }
-}
+@app.route('/get_rank', methods=['POST'])
+def get_rank():
+    rank = 0
+    data = request.get_json()
+    
+    #Chapters
+    if data['chapter'] == 'Dark Angels':
+        rank += 10
+    if data['chapter'] == 'Ultramarines':
+        rank += 20
+    if data['chapter'] == 'White Scars':
+        rank += 30
+    if data['chapter'] == 'Space Wolves':
+        rank += 40
+    if data['chapter'] == 'Blood Angels':
+        rank += 50
+    if data['chapter'] == 'Salamanders':
+        rank += 60
+    if data['chapter'] == 'Imperial Fists':
+        rank += 70
+
+    #Service
+    if data['service'] == '10':
+        rank += 10
+    if data['service'] == '20':
+        rank += 20
+    if data['service'] == '30':
+        rank += 30
+    if data['service'] == '40':
+        rank += 40
+    if data['service'] == '50':
+        rank += 50
+    if data['service'] == '60':
+        rank += 60
+    if data['service'] == '70':
+        rank += 70
+    if data['service'] == '80':
+        rank += 80
+    if data['service'] == '90':
+        rank+= 90
+    if data['service'] == '100':
+        rank += 100
+    
+    return str(rank)
 
 
-brother = {
-    "names": {
-        0: "Devastator",
-        1: "Assault Marine",
-        2: "Relic Guard",
-        3: "Primaris",
-        4: "Battle Brother"
-    }
-}
-
-
-captain = {
-    "names": {
-        0: "Primaris Captain",
-        1: "Sword Brethren",
-        2: "Squad Leader",
-        3: "Veteran hero",
-    }
-}
-
-psyker = {
-    "names": {
-        0: "Stable Psyker",
-        1: "Unstable Psyker",
-        2: "Corrupter Psyker",
-    }
-}
-
-
-master = "Chapter Master"
-
-
-@app.route('/get_rank')
-def lname():
-    rank = ["scout", "brother", "captain", "psyker", "master"]
-    selection = random.choice(rank)
-    if selection == 'scout':
-        lname = random.choice(list(scout["names"].values()))
-    elif selection == 'brother':
-        lname = random.choice(list(brother["names"].values()))
-    elif selection == 'captain':
-        lname = random.choice(list(captain["names"].values()))
-    elif selection == 'psyker':
-        lname = random.choice(list(psyker["names"].values()))
-    elif selection == 'master':
-        lname = 'Chapter Master'
-
-    return Response(selection, mimetype='text/plain')
+    

@@ -1,6 +1,11 @@
 # QA-DevOps-Fundamental-Project- MCQ App:  
 This repository contains my deliverable for the QA devops fundamental project.
 
+
+ 141  sudo systemctl status nginx
+  149  sudo systemctl stop nginx
+  245  history | grep system
+
 ## Contents:
 * [Project Brief](#Project-Brief)  
 * [App Design](#App-Design)
