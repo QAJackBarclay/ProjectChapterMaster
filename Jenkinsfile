@@ -13,7 +13,7 @@ pipeline{
             }
             steps{
                 sh "docker-compose build --parallel"
-                sh "docker login -u $DOCKER_UNAME -p $DOCKER_PWORD"
+                sh "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
                 sh "docker-compose push"
             }
         }
