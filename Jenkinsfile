@@ -12,16 +12,6 @@ pipeline{
                 DOCKERHUB_PASSWORD=credentials('DOCKER_PWORD')
             }
         }
-        stage('deploy'){
-            steps{
-                #swarmcode " "
-            }
-        }
-        stage('curl'){
-            steps{
-                #curl " "
-            }
-        }
             steps{
                 sh "docker-compose build --parallel"
                 sh "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
