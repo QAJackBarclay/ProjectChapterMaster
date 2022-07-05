@@ -3,7 +3,6 @@ from flask_testing import TestCase
 from application import app 
 from unittest.mock import patch
 import requests_mock
-import requests
 
 class TestBase(TestCase):
 
