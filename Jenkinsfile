@@ -11,7 +11,6 @@ pipeline{
                 DOCKERHUB_USERNAME=credentials('DOCKER_UNAME')
                 DOCKERHUB_PASSWORD=credentials('DOCKER_PWORD')
             }
-        }
             steps{
                 sh "docker-compose build --parallel"
                 sh "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
