@@ -1,37 +1,21 @@
-pipeline {
+pipeline{
     agent any
-    stages {
-        stage('test') {
-            steps {
-                dir('flask-app') {
-                    sh "rm application/tests/test_int*"
-                    sh "bash test_basic.sh"
-                }
+    stages{
+        stage('App Testing'){
+            steps{
+                sh "bash test.sh"
             }
         }
-        stage('build and push') {
-            environment {
-                DOCKER_CREDS = credentials('docker-creds')
+        stage('Building and pushing images'){
+            environment{
+                DOCKERHUB_USERNAME=credentials('DOCKER_UNAME')
+                DOCKERHUB_PASSWORD=credentials('DOCKER_PWORD')
             }
-            steps {
-                sh "/bin/bash -c 'docker rmi \$(docker images -q)'"
+            steps{
                 sh "docker-compose build --parallel"
-                sh "docker login -u ${DOCKER_CREDS_USR} -p ${DOCKER_CREDS_PSW}"
+                sh "docker login -u $DOCKER_UNAME -p $DOCKER_PWORD"
                 sh "docker-compose push"
             }
-        }
-        stage('deploy stack') {
-            steps {
-                sh "echo '    driver: overlay' >> docker-compose.yaml"
-                sh "scp ./docker-compose.yaml jenkins@swarm-manager:/home/jenkins/docker-compose.yaml"
-                sh "scp ./nginx.conf jenkins@swarm-manager:/home/jenkins/nginx.conf"
-                sh "ssh jenkins@swarm-manager < deploy.sh"
-            }
-        }
-    }
-    post {
-        always {
-            archiveArtifacts artifacts: "flask-app/htmlcov/*"
         }
     }
 }
