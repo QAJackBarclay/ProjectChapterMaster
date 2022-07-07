@@ -36,13 +36,3 @@ This repository contains my deliverable for the QA devops fundamental project.
     nginx, is a pain in my soul.
 
 * [Future Work](#Future-Work)
-        stage('deploy'){
-            steps{
-                #swarmcode " "
-            }
-        }
-        stage('curl'){
-            steps{
-                #curl " "
-            }
-        }
