@@ -16,7 +16,7 @@ This repository contains my deliverable for the QA devops fundamental project.
 * [App Design](#App-Design)
     I designed the app with simplicity in mind as I overcomplicated my first project which left me with unfinished work, so I have scaled the functionality appropriatly to my level at this time. 
     
-    <img src=  width="900" height="500"/>
+    <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/CMTrello1.PNG  width="900" height="500"/>
 
     
 * [CI Pipeline](#CI-Pipeline)
@@ -33,7 +33,7 @@ This repository contains my deliverable for the QA devops fundamental project.
     After the successful build of my pipeline, I covered all services to 100% before rebuilding the pipeline to ensure there was no issues in updating.
 
     Once testing was complete on visual studio code and running through jenkins which took a few build attempts.
-    <img src=  width="900" height="500"/>
+    <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/jenkinstest.PNG  width="900" height="500"/>
     
 * [The App](#The-App)
     The application has a home html that is visible to the user whilst the backend urls generate the information displayed to the home html.
@@ -44,7 +44,7 @@ This repository contains my deliverable for the QA devops fundamental project.
     I would like to add in ranks, weaponry and also a potential database for names and generated information to be stored for a user if they so wished.
 
 * [Docker](#Docker)
-    <img src=  width="900" height="500"/>
+    <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/Ansibleplaybook.PNG  width="900" height="500"/>
 
 * [Ansible](#ansible)
-    <img src=  width="900" height="500"/>
+    <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/Ansibleping.PNG  width="900" height="500"/>
