@@ -44,7 +44,7 @@ This repository contains my deliverable for the QA devops fundamental project.
     I would like to add in ranks, weaponry and also a potential database for names and generated information to be stored for a user if they so wished.
 
 * [Docker](#Docker)
-    <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/Ansibleplaybook.PNG  width="900" height="500"/>
+    <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/Ansibleping.PNG  width="900" height="500"/>
 
 * [Ansible](#ansible)
-    <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/Ansibleping.PNG  width="900" height="500"/>
+    <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/Ansibleplaybook.PNG  width="900" height="500"/>
