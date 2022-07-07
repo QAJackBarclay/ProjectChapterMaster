@@ -15,10 +15,13 @@ This repository contains my deliverable for the QA devops fundamental project.
     
 * [App Design](#App-Design)
     I designed the app with simplicity in mind as I overcomplicated my first project which left me with unfinished work, so I have scaled the functionality appropriatly to my level at this time. 
+    
+    <img src=  width="900" height="500"/>
 
     
 * [CI Pipeline](#CI-Pipeline)
     I created the pipeline using a seperate virtual machine for Jenkins to be installed on, then I installed docker on the Jenkins VM to establish a relationship, before troubleshooting until I got my first completed build at build #9. 
+
 
 
 * [Risk Assessment](#Risk-Assessment)
@@ -30,6 +33,7 @@ This repository contains my deliverable for the QA devops fundamental project.
     After the successful build of my pipeline, I covered all services to 100% before rebuilding the pipeline to ensure there was no issues in updating.
 
     Once testing was complete on visual studio code and running through jenkins which took a few build attempts.
+    <img src=  width="900" height="500"/>
     
 * [The App](#The-App)
     The application has a home html that is visible to the user whilst the backend urls generate the information displayed to the home html.
@@ -39,7 +43,8 @@ This repository contains my deliverable for the QA devops fundamental project.
 * [Updates](#Updates)
     I would like to add in ranks, weaponry and also a potential database for names and generated information to be stored for a user if they so wished.
 
-* [Known Issues](#Known-Issues)
-    Currently no known issues.
+* [Docker](#Docker)
+    <img src=  width="900" height="500"/>
 
-* [Future Work](#Future-Work)
+* [Ansible](#ansible)
+    <img src=  width="900" height="500"/>
