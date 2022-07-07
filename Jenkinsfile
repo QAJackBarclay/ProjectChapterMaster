@@ -9,7 +9,7 @@ pipeline{
         stage('Ansible playbook run'){
             steps{
                 sh "ansible-playbook ansible-config/playbook1.yaml"
-            }
+            }} 
         stage('Building and pushing images'){
             environment{
                 DOCKERHUB_USERNAME=credentials('DOCKER_UNAME')
