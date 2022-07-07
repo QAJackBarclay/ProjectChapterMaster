@@ -44,7 +44,14 @@ This repository contains my deliverable for the QA devops fundamental project.
     I would like to add in ranks, weaponry and also a potential database for names and generated information to be stored for a user if they so wished.
 
 * [Docker](#Docker)
+    After using Docker compose to containerise and create images of my services, I then set up my jenkins pipeline to ensure there was a connection before then setting up Docker swarm to connect my worker, master and project together.
+
     <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/Ansibleping.PNG  width="900" height="500"/>
 
 * [Ansible](#ansible)
+    using ansible inventory and playbook, I was able to successfuly automate functions that I would normally need to spend time on.
     <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/Ansibleplaybook.PNG  width="900" height="500"/>
+
+    Finally, I created the webhook on GitHub so that whenever I pushed new changes to the repository it would then automatically build on my jenkins pipeline.
+
+    
