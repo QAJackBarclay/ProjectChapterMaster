@@ -6,9 +6,9 @@ pipeline{
                 sh "bash test.sh"
             }
         }
-        stage{'Ansible playbook run'}{
+        stage('Ansible playbook run'){
             steps{
-                sh "ansible-playbook ansible/playbook.yaml"
+                sh "ansible-playbook ansible-config/playbook1.yaml"
             }
         stage('Building and pushing images'){
             environment{
