@@ -2,25 +2,25 @@ version: "3.8"
 services:
   service_1:
     build: ./service_1
-    image: qajackbarclay/service_1:1
+    image: qajackbarclay/service_1:latest
     container_name: service_1
     networks:
       - name-net
   service_2:
     build: ./service_2
-    image: qajackbarclay/service_2:1
+    image: qajackbarclay/service_2:latest
     container_name: service_2
     networks:
       - name-net
   service_3:
     build: ./service_3
-    image: qajackbarclay/service_3:1
+    image: qajackbarclay/service_3:latest
     container_name: service_3
     networks:
       - name-net
   service_4: 
     build: ./service_4
-    image: qajackbarclay/service_4:1
+    image: qajackbarclay/service_4:latest
     container_name: service_4
     networks:
       - name-net

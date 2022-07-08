@@ -21,5 +21,10 @@ pipeline{
                 sh "docker-compose push"
             }
         }
+        stage('Run docker compose '){
+            steps{
+                sh "docker-compose up -d"
+            }   
         }
     }
+}
