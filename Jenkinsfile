@@ -23,7 +23,7 @@ pipeline{
         }
         stage('Run docker compose '){
             steps{
-                sh "scp -i ~/.ssh/ansible_id_rsa docker-compose.yamljackb@swarm-master:~/"
+                sh "scp -i ~/.ssh/ansible_id_rsa docker-compose.yaml jackb@swarm-master:~/"
                 sh "ssh -i ~/.ssh/ansible_id_rsa jackb@swarm-master 'docker stack deploy -c ~/docker-compose.yaml chapter-stack'"
             }   
         }
