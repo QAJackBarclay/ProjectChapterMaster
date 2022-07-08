@@ -21,8 +21,7 @@ This repository contains my deliverable for the QA devops fundamental project.
     
 * [CI Pipeline](#CI-Pipeline)
     I created the pipeline using a seperate virtual machine for Jenkins to be installed on, then I installed docker on the Jenkins VM to establish a relationship, before troubleshooting until I got my first completed build at build #9. 
-
-
+    <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/98542a4c88ccc90f234c29c2983e053068967a5b/Images/pipeline.PNG width="900" height="500"/>
 
 * [Risk Assessment](#Risk-Assessment)
     Here I will provide my risk assessment and the projected challenges I can face during this week.
@@ -34,6 +33,7 @@ This repository contains my deliverable for the QA devops fundamental project.
 
     Once testing was complete on visual studio code and running through jenkins which took a few build attempts.
     <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/jenkinstest.PNG  width="900" height="500"/>
+
     
 * [The App](#The-App)
     The application has a home html that is visible to the user whilst the backend urls generate the information displayed to the home html.
