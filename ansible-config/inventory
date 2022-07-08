@@ -10,5 +10,5 @@
 
 all:
   hosts:
-    swarm-master:
-    swarm-worker:
+    35.242.157.47:
+    34.142.72.200:
