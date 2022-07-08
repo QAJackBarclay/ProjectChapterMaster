@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Ansible playbook run'){
             steps{
-                sh "ansible-playbook ansible-config/playbook1.yaml"
+                sh "ansible-playbook ansible-config/playbook1.yaml ansible-config/inventory"
             }} 
         stage('Building and pushing images'){
             environment{

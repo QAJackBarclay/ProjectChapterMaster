@@ -1,22 +1,22 @@
-# all:
-#   children:
-#     managers:
-#       hosts:
-#         swarm-master:
-#     workers:
-#       hosts:
-#         swarm-worker:
+ all:
+   children:
+      managers:
+        hosts:
+          swarm-master:
+      workers:
+        hosts:
+          swarm-worker:
         
-#   vars:
-#     ansible_user: jenkins
-#     ansible_ssh_private_key_file: '~/.ssh/ansible_id_rsa'
-#     ansible_python_interpreter: "/usr/bin/python3"
+  vars:
+    ansible_user: jenkins
+    ansible_ssh_private_key_file: '~/.ssh/id_rsa'
+    ansible_python_interpreter: "/usr/bin/python3"
 
-#     host ip
-#     user ip
+  #   host ip
+  #   user ip
 
 
 #   copy the public ssh key where ansible is, onto worker and manager and put into their auth keys
 
-35.242.157.47 ansible_sudo_pass=password ansible_ssh_user=jackb
-34.142.72.200 ansible_sudo_pass=password ansible_ssh_user=jackb
+#35.242.157.47 ansible_sudo_pass=password ansible_ssh_user=jackb
+#34.142.72.200 ansible_sudo_pass=password ansible_ssh_user=jackb
