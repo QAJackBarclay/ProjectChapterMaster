@@ -1,11 +1,11 @@
 pipeline{
     agent any
     stages{
-        // stage('App Testing'){
-        //     steps{
-        //         sh "bash test.sh"
-        //     }
-        // }
+        stage('App Testing'){
+            steps{
+                sh "bash test.sh"
+            }
+        }
         stage('Ansible playbook run'){
             steps{
                 sh "ansible-playbook -i ansible-config/inventory.yaml ansible-config/playbook1.yaml"
