@@ -52,6 +52,6 @@ This repository contains my deliverable for the QA devops fundamental project.
     using ansible inventory and playbook, I was able to successfuly automate functions that I would normally need to spend time on.
     <img src=https://github.com/QAJackBarclay/ProjectChapterMaster/blob/7ee6ec1e73831c936b8a201daa2ade7bb649e2d5/Images/Ansibleplaybook.PNG  width="900" height="500"/>
 
-    Finally, I created the webhook on GitHub so that whenever I pushed new changes to the repository it would then automatically build on my jenkins pipeline.
+    Finally, I created the webhook on GitHub so that whenever I pushed new changes to the repository it would then automatically build on my jenkins pipeline!
 
     
