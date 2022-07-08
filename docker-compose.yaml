@@ -31,7 +31,7 @@ services:
       - name-net
     volumes:
       - type: bind
-        source: ./nginx.conf
+        source: /home/jackb/nginx.conf
         target: /etc/nginx/nginx.conf
     ports:
       - target: 80
