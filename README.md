@@ -1,4 +1,4 @@
-# QA-DevOps-Fundamental-Project- MCQ App:  
+# QA-DevOps-Practical-Project- MCQ App:  
 This repository contains my deliverable for the QA devops fundamental project.
 
 
